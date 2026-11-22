@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="عالم أليف - متجر مستلزمات الحيوانات الأليفة. طعام وألعاب وإكسسوارات وعناية.">
+<title>عالم أليف | مستلزمات حيوانك الأليف</title>
+<style>
+:root{--green:#28745b;--deep:#174b3b;--cream:#fffaf1;--peach:#f5dfc8;--ink:#26352f;--muted:#718078;--white:#fff;--line:#e8eee9;--shadow:0 12px 35px #174b3b12}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Tahoma,Arial,sans-serif;background:#fff;color:var(--ink);line-height:1.7}a{color:inherit;text-decoration:none}button,input,select,textarea{font:inherit}button{cursor:pointer;border:0}.container{width:min(1160px,92%);margin:auto}
+.topbar{background:var(--deep);color:white;text-align:center;padding:8px;font-size:13px}.header{position:sticky;top:0;z-index:10;background:#ffffffed;backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}.nav{height:76px;display:flex;align-items:center;justify-content:space-between;gap:20px}.logo{font-size:25px;font-weight:900;color:var(--deep);white-space:nowrap}.logo span{color:#e39b54}.links{display:flex;gap:25px;color:#50645a;font-size:14px}.links a:hover{color:var(--green)}.nav-actions{display:flex;gap:10px;align-items:center}.iconbtn{background:#f1f6f2;color:var(--deep);padding:10px 14px;border-radius:14px}.cart-count{background:var(--green);color:white;border-radius:30px;padding:1px 7px;font-size:12px;margin-right:4px}
+.hero{background:linear-gradient(110deg,#f8ead9,#fffaf1 58%,#e9f3eb);padding:70px 0 65px;overflow:hidden}.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;align-items:center;gap:30px}.eyebrow{display:inline-block;background:#e4f0e6;color:var(--green);padding:6px 13px;border-radius:30px;font-size:13px;font-weight:bold}.hero h1{font-size:clamp(34px,5vw,56px);line-height:1.25;margin:18px 0;color:var(--deep)}.hero p{color:#627168;max-width:520px;font-size:17px}.primary{background:var(--green);color:white;padding:13px 23px;border-radius:13px;font-weight:bold;display:inline-block;transition:.2s}.primary:hover{background:var(--deep);transform:translateY(-2px)}.secondary{background:white;color:var(--deep);padding:13px 20px;border-radius:13px;font-weight:bold;display:inline-block;border:1px solid var(--line)}.hero-buttons{display:flex;gap:12px;flex-wrap:wrap;margin-top:25px}.hero-art{min-height:330px;border-radius:35px;background:linear-gradient(145deg,#d9eadb,#f7e5cf);display:grid;place-items:center;position:relative}.pet-emoji{font-size:150px;filter:drop-shadow(0 18px 10px #31533a22)}.bubble{position:absolute;background:white;padding:10px 15px;border-radius:16px;box-shadow:var(--shadow);font-size:13px}.bubble.one{top:35px;right:25px}.bubble.two{bottom:35px;left:25px}
+.benefits{display:grid;grid-template-columns:repeat(3,1fr);gap:15px;margin:28px auto}.benefit{padding:18px;background:white;border:1px solid var(--line);border-radius:18px;display:flex;align-items:center;gap:12px}.benefit b{display:block}.benefit small{color:var(--muted)}.benefit i{font-style:normal;font-size:26px}
+.section{padding:60px 0}.section-head{display:flex;align-items:end;justify-content:space-between;gap:15px;margin-bottom:25px}.section-head h2{font-size:30px;color:var(--deep);margin:0}.section-head p{color:var(--muted);margin:5px 0 0}.categories{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}.category{border:1px solid var(--line);border-radius:20px;padding:22px 10px;text-align:center;background:#fff;transition:.2s}.category:hover{transform:translateY(-4px);box-shadow:var(--shadow);border-color:#c5dfcd}.category .emoji{font-size:40px}.category b{display:block;margin-top:8px}.toolbar{display:flex;gap:12px;flex-wrap:wrap;margin:22px 0}.search{flex:1;min-width:210px;border:1px solid var(--line);border-radius:13px;padding:12px 15px;outline:none}.search:focus{border-color:var(--green)}.filter{border:1px solid var(--line);border-radius:13px;padding:12px;background:white;color:var(--ink)}
+.products{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}.product{border:1px solid var(--line);border-radius:20px;overflow:hidden;background:white;transition:.2s;position:relative}.product:hover{transform:translateY(-4px);box-shadow:var(--shadow)}.product-img{height:175px;display:grid;place-items:center;font-size:78px;background:linear-gradient(135deg,#f5f8f3,#fff0df)}.tag{position:absolute;top:12px;right:12px;background:#e6f1e7;color:var(--green);padding:4px 9px;border-radius:20px;font-size:11px}.product-info{padding:15px}.product-info h3{font-size:16px;margin:0 0 6px}.desc{font-size:12px;color:var(--muted);min-height:38px}.price-row{display:flex;align-items:center;justify-content:space-between;margin-top:12px}.price{font-weight:900;color:var(--deep);font-size:18px}.add{background:var(--green);color:white;border-radius:10px;padding:8px 12px}.add:hover{background:var(--deep)}.empty{grid-column:1/-1;text-align:center;padding:35px;color:var(--muted)}
+.promo{background:var(--deep);color:white;border-radius:28px;padding:35px;display:flex;justify-content:space-between;align-items:center;gap:20px}.promo h2{margin:0 0 8px;font-size:28px}.promo p{margin:0;color:#d4e3d9}.promo .secondary{white-space:nowrap}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:35px;align-items:center}.about-art{background:#f4eadc;border-radius:25px;min-height:260px;display:grid;place-items:center;font-size:110px}.about-grid h2{color:var(--deep);font-size:30px;margin:0 0 12px}.about-grid p{color:var(--muted)}
+.faq{max-width:800px;margin:auto}.faq details{border-bottom:1px solid var(--line);padding:16px 4px}.faq summary{font-weight:bold;cursor:pointer;color:var(--deep)}.faq p{color:var(--muted);margin-bottom:0}
+.contact{background:#f7faf7}.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:35px}.contact-card{background:white;border:1px solid var(--line);border-radius:22px;padding:24px}.contact-card input,.contact-card textarea{width:100%;padding:12px;border:1px solid var(--line);border-radius:11px;margin:7px 0 13px;outline:none}.contact-card textarea{min-height:100px;resize:vertical}.contact-card label{font-size:13px;font-weight:bold}.footer{background:#123d30;color:#e9f2ec;padding:38px 0 18px}.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:25px}.footer p,.footer a{color:#c5d7cc;font-size:13px}.footer h3{margin-top:0}.copyright{border-top:1px solid #ffffff25;margin-top:25px;padding-top:15px;text-align:center;color:#a9c0b2;font-size:12px}
+.overlay{position:fixed;inset:0;background:#10251db0;z-index:30;display:none;justify-content:flex-end}.overlay.open{display:flex}.drawer{background:white;width:min(440px,100%);height:100%;padding:22px;overflow:auto}.drawer-head{display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--line);padding-bottom:12px}.close{background:#f1f5f2;border-radius:10px;padding:7px 12px}.cart-item{display:flex;align-items:center;gap:12px;border-bottom:1px solid var(--line);padding:14px 0}.cart-emoji{font-size:35px}.cart-item-info{flex:1}.cart-item-info small{color:var(--muted)}.qty{display:flex;align-items:center;gap:8px}.qty button{background:#eef4ef;border-radius:7px;padding:3px 9px}.cart-total{display:flex;justify-content:space-between;font-weight:bold;font-size:19px;padding:20px 0}.checkout{width:100%;text-align:center}.modal{position:fixed;inset:0;background:#10251d99;z-index:40;display:none;place-items:center;padding:15px}.modal.open{display:grid}.modal-box{background:white;border-radius:22px;padding:25px;width:min(500px,100%);max-height:90vh;overflow:auto}.modal-box input,.modal-box textarea{width:100%;padding:11px;border:1px solid var(--line);border-radius:10px;margin:6px 0 13px}.modal-box label{font-size:13px;font-weight:bold}.notice{font-size:12px;color:var(--muted)}
+@media(max-width:850px){.links{display:none}.hero-grid,.about-grid,.contact-grid{grid-template-columns:1fr}.hero-art{min-height:240px}.pet-emoji{font-size:115px}.products{grid-template-columns:repeat(2,1fr)}.categories{grid-template-columns:repeat(3,1fr)}.footer-grid{grid-template-columns:1fr 1fr}.benefits{grid-template-columns:1fr}.promo{align-items:flex-start;flex-direction:column}}
+@media(max-width:480px){.nav{height:65px}.logo{font-size:21px}.hero{padding:45px 0}.products{gap:10px}.product-img{height:130px;font-size:60px}.product-info{padding:11px}.product-info h3{font-size:14px}.price{font-size:15px}.add{padding:7px 9px}.categories{grid-template-columns:repeat(2,1fr)}.section{padding:42px 0}.footer-grid{grid-template-columns:1fr}.section-head h2{font-size:25px}}
+</style>
+</head>
+<body>
+<div class="topbar">🐾 أهلاً بيك في عالم أليف — كل اللي حيوانك الأليف محتاجه في مكان واحد</div>
+<header class="header"><div class="container nav">
+<a class="logo" href="#">🐾 عالم <span>أليف</span></a>
+<nav class="links"><a href="#home">الرئيسية</a><a href="#categories">الأقسام</a><a href="#products">المنتجات</a><a href="#about">عن المتجر</a><a href="#contact">تواصل معنا</a></nav>
+<div class="nav-actions"><a class="iconbtn" href="https://wa.me/201558073015" target="_blank" rel="noopener">واتساب</a><button class="iconbtn" onclick="openCart()">🛒 السلة <span class="cart-count" id="cartCount">0</span></button></div>
+</div></header>
+<main>
+<section class="hero" id="home"><div class="container hero-grid"><div>
+<span class="eyebrow">حب ورعاية في كل تفصيلة</span><h1>خلي حياة صاحبك الصغير <span style="color:#d78c49">أحلى وأسعد</span></h1>
+<p>كل مستلزمات حيوانك الأليف من أكل صحي وألعاب ممتعة وإكسسوارات ومنتجات عناية، اختار اللي يناسبه وإحنا نهتم بالباقي.</p>
+<div class="hero-buttons"><a class="primary" href="#products">تسوق دلوقتي</a><a class="secondary" href="#about">اعرف أكتر عننا</a></div>
+</div><div class="hero-art" style="background:#e9f1e9 url(https://www.greghendry.co.uk/images/industries-bottomimage.jpg) center/cover no-repeat;min-height:360px"><span class="bubble one">💚 رعاية بحب</span><span class="bubble two">كل احتياجاتهم في مكان واحد</span></div></div></section>
+<div class="container benefits">
+<div class="benefit"><i>🚚</i><div><b>توصيل لحد باب البيت</b><small>تفاصيل الشحن حسب منطقتك</small></div></div>
+<div class="benefit"><i>💚</i><div><b>اختيارات متنوعة</b><small>احتياجات قطط وكلاب وطيور</small></div></div>
+<div class="benefit"><i>🎁</i><div><b>اهتمام بكل التفاصيل</b><small>لأن راحتهم تهمنا</small></div></div>
+</div>
+<section class="section container" id="categories"><div class="section-head"><div><h2>تسوق حسب القسم</h2><p>اختار القسم اللي صاحبك محتاجه</p></div></div>
+<div class="categories">
+<a class="category" href="#products" onclick="setCategory('طعام')"><div class="emoji">🥣</div><b>الطعام</b></a>
+<a class="category" href="#products" onclick="setCategory('ألعاب')"><div class="emoji">🧸</div><b>الألعاب</b></a>
+<a class="category" href="#products" onclick="setCategory('عناية')"><div class="emoji">🧴</div><b>العناية والنظافة</b></a>
+<a class="category" href="#products" onclick="setCategory('إكسسوارات')"><div class="emoji">🎀</div><b>الإكسسوارات</b></a>
+<a class="category" href="#products" onclick="setCategory('طيور')"><div class="emoji">🐦</div><b>مستلزمات الطيور</b></a>
+</div></section>
+<section class="section container" id="products"><div class="section-head"><div><h2>منتجاتنا</h2><p>اكتشف مجموعة من المنتجات المختارة</p></div></div>
+<div class="toolbar"><input id="search" class="search" placeholder="🔎 دور على منتج..." oninput="renderProducts()"><select id="categoryFilter" class="filter" onchange="renderProducts()"><option value="الكل">كل الأقسام</option><option>طعام</option><option>ألعاب</option><option>عناية</option><option>إكسسوارات</option><option>طيور</option></select><select id="sort" class="filter" onchange="renderProducts()"><option value="default">ترتيب افتراضي</option><option value="low">السعر: من الأقل للأعلى</option><option value="high">السعر: من الأعلى للأقل</option></select></div>
+<div class="products" id="productsGrid"></div></section>
+<section class="container section"><div class="promo"><div><h2>كل يوم مع صاحبك يستاهل حاجة حلوة 🐾</h2><p>ابدأ اختار احتياجاته من منتجات عالم أليف.</p></div><a href="#products" class="secondary">اكتشف المنتجات ←</a></div></section>
+<section class="section container" id="about"><div class="about-grid"><div class="about-art">🐕 🐈 🐇</div><div><span class="eyebrow">حكايتنا</span><h2>إحنا هنا علشان نهتم بأصحابك الصغيرين</h2><p>في عالم أليف بنؤمن إن الحيوانات الأليفة أفراد من العيلة، وعشان كده بنجمع مستلزماتهم في مكان واحد: من التغذية واللعب لحد النظافة والراحة.</p><p>هدفنا نخلي تجربة التسوق سهلة وواضحة، ونساعدك تلاقي المنتجات المناسبة لاحتياجات حيوانك الأليف.</p><a href="#contact" class="primary">كلمنا</a></div></div></section>
+<section class="section container"><div class="section-head"><div><h2>أسئلة بتتكرر</h2><p>إجابات سريعة على أهم استفساراتك</p></div></div><div class="faq">
+<details><summary>إزاي أطلب منتج؟</summary><p>ضيف المنتجات للسلة، وبعدها اضغط إتمام الطلب واملأ بيانات التوصيل.</p></details>
+<details><summary>هل الأسعار والتوصيل نهائيين؟</summary><p>الأسعار المعروضة تجريبية وقابلة للتعديل. أضف تكلفة الشحن وسياسة التوصيل الفعلية قبل إطلاق المتجر.</p></details>
+<details><summary>هل أقدر أستفسر قبل الطلب؟</summary><p>أكيد، ابعتلنا من نموذج التواصل أو حدّث بيانات التواصل الخاصة بمتجرك.</p></details>
+</div></section>
+<section class="section contact" id="contact"><div class="container"><div class="section-head"><div><h2>يسعدنا نسمع منك</h2><p>عندك سؤال أو محتاج مساعدة؟ ابعتلنا رسالة</p></div></div><div class="contact-grid">
+<div><h3>تواصل مع عالم أليف</h3><p>📍 العنوان: أضف عنوان المحل هنا</p><p>📞 الهاتف وواتساب: 01558073015</p><p>✉️ البريد: التواصل عبر واتساب: 01558073015</p><p>🕒 مواعيد العمل: يومياً من 10 صباحاً حتى 10 مساءً</p></div>
+<form class="contact-card" onsubmit="sendContact(event)"><label>اسمك</label><input required id="contactName" placeholder="اكتب اسمك"><label>البريد الإلكتروني أو رقم الهاتف</label><input required id="contactWay" placeholder="وسيلة التواصل"><label>رسالتك</label><textarea required id="contactMessage" placeholder="اكتب رسالتك هنا..."></textarea><button class="primary" type="submit">إرسال الرسالة</button><p class="notice" id="contactNotice">سيتم فتح واتساب برسالتك لتأكيد إرسالها.</p></form>
+</div></div></section>
+</main>
+<footer class="footer"><div class="container"><div class="footer-grid"><div><h3>🐾 عالم أليف</h3><p>كل مستلزمات حيوانك الأليف بحب واهتمام. شكراً لثقتك فينا!</p></div><div><h3>روابط سريعة</h3><p><a href="#home">الرئيسية</a></p><p><a href="#products">المنتجات</a></p><p><a href="#about">عن المتجر</a></p></div><div><h3>تابعنا</h3><p>فيسبوك — إنستجرام — تيك توك</p><p>أضف روابط صفحاتك هنا</p></div></div><div class="copyright">© 2026 عالم أليف. جميع الحقوق محفوظة. الصور المعروضة صور توضيحية من مواقع خارجية، والأسعار تحتاج مراجعة قبل الإطلاق.</div></div></footer>
+<div class="overlay" id="cartOverlay" onclick="if(event.target===this)closeCart()"><aside class="drawer"><div class="drawer-head"><h2>سلة المشتريات 🛒</h2><button class="close" onclick="closeCart()">✕</button></div><div id="cartItems"></div><div class="cart-total"><span>الإجمالي</span><span id="cartTotal">0 جنيه</span></div><button class="primary checkout" onclick="checkout()">إتمام الطلب</button><p class="notice">بعد تأكيد البيانات، هتقدر تبعت تفاصيل الطلب مباشرة على واتساب المتجر.</p></aside></div>
+<div class="modal" id="checkoutModal"><div class="modal-box"><div class="drawer-head"><h2>بيانات الطلب</h2><button class="close" onclick="closeCheckout()">✕</button></div><form onsubmit="submitOrder(event)"><label>الاسم بالكامل</label><input required id="buyerName" placeholder="اسم المستلم"><label>رقم الهاتف</label><input required id="buyerPhone" type="tel" placeholder="01xxxxxxxxx"><label>العنوان بالتفصيل</label><textarea required id="buyerAddress" placeholder="المحافظة، المنطقة، الشارع، رقم المبنى"></textarea><label>ملاحظات (اختياري)</label><textarea id="buyerNotes" placeholder="أي تفاصيل إضافية"></textarea><button class="primary" style="width:100%" type="submit">تأكيد الطلب</button></form><p class="notice">الدفع عند الاستلام يتم الاتفاق عليه مع المتجر عبر واتساب. الدفع الإلكتروني يحتاج ربط بوابة دفع.</p></div></div>
+<script>
+const products=[
+{id:1,name:"طعام جاف للقطط",category:"طعام",price:280,emoji:"🥣",desc:"وجبة يومية متوازنة للقطط",tag:"الأكثر طلباً"},
+{id:2,name:"طعام للكلاب",category:"طعام",price:350,emoji:"🦴",desc:"اختيار مناسب لوجبات الكلاب",tag:""},
+{id:3,name:"كرة لعب للقطط",category:"ألعاب",price:65,emoji:"🧶",desc:"لعب وحركة وتسليه لصديقك",tag:""},
+{id:4,name:"لعبة مضغ للكلاب",category:"ألعاب",price:95,emoji:"🦴",desc:"لعبة ممتعة لوقت النشاط",tag:""},
+{id:5,name:"شامبو للحيوانات",category:"عناية",price:120,emoji:"🧴",desc:"منتج للعناية بنظافة الفرو",tag:""},
+{id:6,name:"فرشاة تمشيط",category:"عناية",price:85,emoji:"🪮",desc:"للعناية بالفرو بشكل منتظم",tag:""},
+{id:7,name:"طوق للحيوانات",category:"إكسسوارات",price:110,emoji:"🎀",desc:"إكسسوار عملي وأنيق",tag:""},
+{id:8,name:"سرير صغير",category:"إكسسوارات",price:420,emoji:"🛏️",desc:"مساحة مريحة للراحة والنوم",tag:""},
+{id:9,name:"خلطة طعام للطيور",category:"طيور",price:75,emoji:"🐦",desc:"خلطة حبوب للطيور الأليفة",tag:""},
+{id:10,name:"مجثم للطيور",category:"طيور",price:90,emoji:"🪵",desc:"إضافة للقفص ووقت النشاط",tag:""},
+{id:11,name:"طبق طعام ومياه",category:"إكسسوارات",price:55,emoji:"🥣",desc:"طبق عملي للاستخدام اليومي",tag:""},
+{id:12,name:"صندوق رمل للقطط",category:"عناية",price:240,emoji:"🐾",desc:"من مستلزمات نظافة القطط",tag:""}
+];
+products.forEach(p=>{
+ p.photo = (p.category==="ألعاب" || p.category==="عناية")
+ ? "https://cdn.shopify.com/s/files/1/0279/3016/5319/files/aaeb69763379464cdb47a79397c89cad.jpg?v=1727675287"
+ : (p.category==="طيور"
+ ? "https://www.greghendry.co.uk/images/industries-bottomimage.jpg"
+ : "https://d2zkwdgks3jmb3.cloudfront.net/fileadmin/shared/stores/pet_centar/Store_Pet_Centar_gross.jpg");
+});
+let cart=[];
+const money=n=>n.toLocaleString("ar-EG")+" جنيه";
+function renderProducts(){
+ let q=document.getElementById("search").value.trim().toLowerCase(),cat=document.getElementById("categoryFilter").value,sort=document.getElementById("sort").value;
+ let list=products.filter(p=>(cat==="الكل"||p.category===cat)&&(p.name.toLowerCase().includes(q)||p.desc.toLowerCase().includes(q)));
+ if(sort==="low")list.sort((a,b)=>a.price-b.price);if(sort==="high")list.sort((a,b)=>b.price-a.price);
+ document.getElementById("productsGrid").innerHTML=list.length?list.map(p=>`<article class="product"><div class="product-img" style="overflow:hidden"><img src="${p.photo}" alt="${p.name}" loading="lazy" style="width:100%;height:100%;object-fit:cover"></div>${p.tag?`<span class="tag">${p.tag}</span>`:""}<div class="product-info"><h3>${p.name}</h3><div class="desc">${p.desc}</div><div class="price-row"><span class="price">${money(p.price)}</span><button class="add" onclick="addToCart(${p.id})">+ أضف</button></div></div></article>`).join(""):'<div class="empty">مفيش منتجات مطابقة لبحثك حالياً.</div>';
+}
+function setCategory(cat){document.getElementById("categoryFilter").value=cat;renderProducts()}
+function addToCart(id){let item=cart.find(x=>x.id===id);if(item)item.qty++;else cart.push({id,qty:1});updateCart();document.getElementById("cartOverlay").classList.add("open")}
+function updateCart(){
+ document.getElementById("cartCount").textContent=cart.reduce((s,x)=>s+x.qty,0);
+ document.getElementById("cartItems").innerHTML=cart.length?cart.map(x=>{let p=products.find(z=>z.id===x.id);return `<div class="cart-item"><span class="cart-emoji">${p.emoji}</span><div class="cart-item-info"><b>${p.name}</b><br><small>${money(p.price)}</small></div><div class="qty"><button onclick="changeQty(${p.id},-1)">−</button>${x.qty}<button onclick="changeQty(${p.id},1)">+</button></div></div>`}).join(""):'<p class="empty">السلة لسه فاضية. اختار منتجاتك المفضلة 🐾</p>';
+ document.getElementById("cartTotal").textContent=money(cart.reduce((s,x)=>s+products.find(p=>p.id===x.id).price*x.qty,0));
+}
+function changeQty(id,n){let x=cart.find(a=>a.id===id);if(!x)return;x.qty+=n;if(x.qty<=0)cart=cart.filter(a=>a.id!==id);updateCart()}
+function openCart(){document.getElementById("cartOverlay").classList.add("open")}function closeCart(){document.getElementById("cartOverlay").classList.remove("open")}
+function checkout(){if(!cart.length){alert("السلة فاضية! أضف منتج الأول.");return}closeCart();document.getElementById("checkoutModal").classList.add("open")}
+function closeCheckout(){document.getElementById("checkoutModal").classList.remove("open")}
+function submitOrder(e){
+ e.preventDefault();
+ let name=document.getElementById("buyerName").value;
+ let phone=document.getElementById("buyerPhone").value;
+ let address=document.getElementById("buyerAddress").value;
+ let notes=document.getElementById("buyerNotes").value;
+ let lines=cart.map(x=>{
+   let p=products.find(z=>z.id===x.id);
+   return `• ${p.name} × ${x.qty} = ${p.price*x.qty} جنيه`;
+ }).join("\n");
+ let total=cart.reduce((s,x)=>s+products.find(p=>p.id===x.id).price*x.qty,0);
+ let message=`طلب جديد من متجر عالم أليف 🐾\nالاسم: ${name}\nرقم العميل: ${phone}\nالعنوان: ${address}\n\nالمنتجات:\n${lines}\n\nالإجمالي: ${total} جنيه\nملاحظات: ${notes || "لا يوجد"}`;
+ window.open("https://wa.me/201558073015?text="+encodeURIComponent(message),"_blank","noopener");
+ alert("هنفتح واتساب برسالة طلبك. اضغط إرسال داخل واتساب لتأكيد الطلب مع المتجر.");
+ cart=[];updateCart();closeCheckout();e.target.reset();
+}
+function sendContact(e){
+ e.preventDefault();
+ let n=document.getElementById("contactName").value;
+ let way=document.getElementById("contactWay").value;
+ let msg=document.getElementById("contactMessage").value;
+ let text=`رسالة من موقع عالم أليف 🐾\nالاسم: ${n}\nوسيلة التواصل: ${way}\nالرسالة: ${msg}`;
+ window.open("https://wa.me/201558073015?text="+encodeURIComponent(text),"_blank","noopener");
+ document.getElementById("contactNotice").textContent="تم تجهيز رسالتك في واتساب. اضغط إرسال لإيصالها للمتجر.";
+}
+renderProducts();updateCart();
+</script>
+</body></html>
